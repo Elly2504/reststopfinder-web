@@ -20,44 +20,71 @@
     </style>
 </head>
 <body>
+    <!-- DRAFT for 3.1.0 (10), session reststopfinder-f1, 2026-09-19. Blocks marked IF-… are
+         resolved against the release tip before the owner-approved push; the marker comments are
+         removed then. The effective date is set on the day of the push. -->
     <h1>Privacy Policy</h1>
-    <p class="updated">Effective date: March 14, 2026</p>
+    <p class="updated">Effective date: <!-- SET ON PUSH -->September 2026</p>
 
-    <p>RestStop Finder ("the App") is developed by an independent developer. This policy explains what data the App accesses, how it is used, and your choices.</p>
+    <p>RestStop Finder ("the App") is developed by an independent developer. This policy explains what data the App uses, where it goes, and your choices.</p>
 
-    <h2>Location Data</h2>
-    <p>The App uses your device's location to find nearby highway rest stops. Location data is processed entirely on your device and is never sent to our servers. When you grant "Always" location permission, the App uses iOS region monitoring to notify you of nearby rest stops while driving — this also runs on-device.</p>
-    <p>You can revoke location permission at any time in iOS Settings.</p>
+    <h2>The Short Version</h2>
+    <ul>
+        <li>No account, no ads, no analytics, no tracking.</li>
+        <li>We run no server. We never receive your location, your trips or anything else about you.</li>
+        <li>To show what is around a place, the App asks public map and data services about that area. Those requests carry only the area or place they need.</li>
+        <li>Your favorites, trips, photos and notes stay on your device.</li>
+    </ul>
 
-    <h2>Third-Party Services</h2>
-    <p>The App queries the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">OpenStreetMap Overpass API</a> to retrieve rest stop data. These queries include geographic coordinates based on your approximate area to find nearby rest stops. No personal identifiers, device IDs, or account information are included in these requests. OpenStreetMap's own <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">privacy policy</a> applies to their service.</p>
-    <p>No other third-party services, analytics, advertising, or tracking SDKs are used.</p>
+    <h2>Location</h2>
+    <p>With your permission ("While Using the App"), the App uses your location on your device to show nearby rest stops, sort places by distance, and start a trip from where you are.</p>
+    <!-- IF-E0 (R83/R86): keep this paragraph -->
+    <p>The App does not ask for "Always" location. If you subscribe to RestStop Pro and start a route with its Lock Screen Live Activity, location updates continue in the background only while that Live Activity runs, so your ETA stays current. iOS shows its location indicator during that time, and updates stop when the route ends.</p>
+    <!-- /IF-E0 -->
+    <p>You can change or revoke location permission at any time in iOS Settings.</p>
+
+    <h2>Services the App Contacts</h2>
+    <p>The App calls the services below directly from your device. We have no data agreement with any of them, and nothing they receive is sent to us. Each one's own privacy policy applies.</p>
+    <ul>
+        <li><strong>Apple Maps</strong> (search, place cards, Look Around, directions and map images) and <strong>Apple Weather</strong> (weather at a rest stop). These receive the area or place you are looking at, under <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</li>
+        <li><strong>Apple App Store</strong> for purchases and restoring them. Payment is handled entirely by Apple.</li>
+        <li><strong>OpenStreetMap Overpass API</strong> (<code>overpass-api.de</code>, with a fallback server) for rest areas, parking and place details. It receives a map area. See the <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">OSMF Privacy Policy</a>.</li>
+        <li><strong>NREL / U.S. Department of Energy Alternative Fuels Data Center</strong> for EV charging stations. It receives a map area or the line of your route.</li>
+        <li><strong>U.S. Department of Transportation</strong> truck-parking data (served through ArcGIS) for truck and RV parking. It receives a map area.</li>
+        <li><strong>State truck-parking feeds</strong> (TPIMS; currently Illinois) for live space counts. The App downloads the whole state feed, so no location is sent.</li>
+        <li><strong>Wikipedia and Wikimedia</strong> to rank popular places when you browse a city in City Trips. They receive the city area and place names, never your GPS position.<!-- IF-PHASE-C --> Landmark photos come from Wikimedia Commons and Wikidata and are credited to their authors in the App.<!-- /IF-PHASE-C --></li>
+    </ul>
+    <p>Links you choose to open (Google Maps, Waze, OpenStreetMap, a state's website) open in that app or your browser and are governed by that service.</p>
+    <p>The App contains no third-party analytics, advertising, attribution or crash-reporting code, and it does not use the advertising identifier.</p>
 
     <h2>Data Stored on Your Device</h2>
     <ul>
-        <li><strong>Favorites</strong> — saved via SwiftData, stored locally on your device.</li>
-        <li><strong>Preferences</strong> — notification settings and onboarding state, stored in UserDefaults.</li>
-        <li><strong>Cache</strong> — rest stop data is cached temporarily to reduce network requests. You can clear the cache from the Settings tab.</li>
+        <li><strong>Favorites and trips</strong>: saved places, planned and recorded trips, their stops, and the notes and photos you add. They are stored with Apple's SwiftData in the App's own storage, which the App's widget and CarPlay screen share on the same device.</li>
+        <!-- IF-B16 -->
+        <li><strong>Imported files</strong>: when you import a GPX or KML file, the App reads the file you choose on your device to build a trip. The file never leaves your device.</li>
+        <!-- /IF-B16 -->
+        <li><strong>Preferences</strong>: settings, your vehicle profile for Truck/RV mode, and onboarding state.</li>
+        <li><strong>Caches</strong>: rest stop, parking, EV and place data and preview images are cached to load faster and reduce network requests. You can clear the rest stop cache in Settings, and all of it is removed when you delete the App.</li>
     </ul>
-    <p>No data is synced to external servers or cloud services.</p>
+    <p>Nothing is synced to our servers or to any cloud service by the App. If you share a trip, the system share sheet sends it only where you choose.</p>
 
     <h2>No Accounts or Personal Information</h2>
-    <p>The App does not require an account, does not collect your name or email, and does not store any personal information.</p>
+    <p>The App does not require an account and does not collect your name, email or any other personal information.</p>
 
     <h2>Data Sharing</h2>
-    <p>Your data is never sold, shared, or transferred to third parties.</p>
+    <p>We do not sell, share or transfer your data, because we never receive it.</p>
 
     <h2>Children's Privacy</h2>
     <p>The App does not knowingly collect any data from children. No personal information is collected from any user.</p>
 
     <h2>Data Retention and Deletion</h2>
-    <p>All data (favorites, preferences, cache) is stored locally on your device. You can delete your favorites individually from the Favorites tab, clear the cache from Settings, or delete all app data by uninstalling the App. No data is retained on any server.</p>
+    <p>All data stays on your device. Delete favorites and trips in the App, clear the cache in Settings, or delete the App to remove everything. No data is kept on any server of ours.</p>
 
     <h2>Your Rights</h2>
-    <p>Since RestStop Finder does not collect or store personal data on any server, there is no personal data to access, export, or delete remotely. All data is under your control on your device. You can revoke location access, delete favorites, or uninstall the App at any time.</p>
+    <p>Because we do not collect or store personal data, there is nothing for us to access, export or delete remotely. You stay in control on your device: revoke location access, delete what you saved, or uninstall the App at any time.</p>
 
     <h2>Changes to This Policy</h2>
-    <p>If this policy is updated, the revised version will be posted here with an updated effective date.</p>
+    <p>If this policy changes, the new version will be posted here with a new effective date.</p>
 
     <h2>Contact</h2>
     <p>Questions or concerns? Email <a href="mailto:yusufu16y@gmail.com">yusufu16y@gmail.com</a>.</p>

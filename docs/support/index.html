@@ -29,7 +29,7 @@
 </head>
 <body>
     <h1>RestStop Finder Support</h1>
-    <p>Find highway rest stops across the United States with real-time data, smart notifications, and directions.</p>
+    <p>Find highway rest stops across the United States, and plan road trips and city trips around them.</p>
 
     <div class="contact-box">
         <h2 style="margin-top: 0;">Contact Us</h2>
@@ -46,8 +46,10 @@
     <h3>Why does the app need my location?</h3>
     <p>Your location is used to show rest stops near you and calculate distances. Location data is processed entirely on your device and is never sent to our servers.</p>
 
-    <h3>What is "Always" location permission for?</h3>
-    <p>If you enable background notifications, the app uses iOS region monitoring to alert you when approaching a rest stop — even when the app is closed. This feature is optional and can be disabled in Settings. The app works fully with "When In Use" location permission.</p>
+    <!-- IF-E0 (R83/R86): keep this answer -->
+    <h3>Does the app need "Always" location?</h3>
+    <p>No. The app works with "While Using the App" location. If you have RestStop Pro and start a route with its Lock Screen Live Activity, location updates continue in the background only while that Live Activity runs, so your ETA stays current. iOS shows its location indicator during that time.</p>
+    <!-- /IF-E0 -->
 
     <h3>Can I use the app without location access?</h3>
     <p>The app requires location access to find rest stops near you. If location permission is denied, the app will show a prompt explaining how to enable it in iOS Settings.</p>
@@ -62,7 +64,7 @@
     <ul>
         <li>iOS 17.0 or later</li>
         <li>iPhone or iPad</li>
-        <li>Internet connection (for loading rest stop data)</li>
+        <li>Internet connection for maps, place details and live data (rest stops are built into the app)</li>
     </ul>
 
     <p style="margin-top: 2rem; color: #888; font-size: 0.9rem;">
